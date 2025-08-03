@@ -4,7 +4,7 @@ import './index.css';
 function App() {
   const [firstCard, setFirstCard] = useState(null);
   const [secondCard, setSecondCard] = useState(null);
-  const [solved, setSolved] = useState([]);   // <--- NEW
+  const [solved, setSolved] = useState([]); 
 
   const arr =  ['😚','😋','🤨','🥶','a','🤩','🥶','😚','🤨','🤓','👺','😋','🤓','👺','🤩'];
 
@@ -18,7 +18,6 @@ function App() {
       setSecondCard({ value, index });
 
       if (firstCard.value === value) {
-        // matched → mark BOTH indexes as solved
         setSolved([...solved, firstCard.index, index]);
       }
 
